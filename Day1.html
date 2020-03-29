@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn JAVASCRIPT</title>
-
+    <link rel="stylesheet" href="default.css" />
     <link rel="icon" href="logorajat.png" type="image/gif" sizes="16x16" />
     <style>
       table,
@@ -18,6 +18,14 @@
       }
       table {
         width: 80%;
+      }
+      p {
+        margin: 5px;
+      }
+      .para {
+        width: 80%;
+        margin: 5px auto;
+        align-items: center;
       }
       #tablefor ol ul {
         list-style-type: none;
@@ -40,6 +48,11 @@
         /* For Mobile Screen */
         .start {
           width: 600px;
+          overflow-x: hidden;
+        }
+        .para {
+          width: 500px;
+          margin: 5px auto;
         }
       }
     </style>
@@ -57,6 +70,7 @@
         style="text-align: center;margin: auto;border: 2px solid orange;max-width: 300px;"
         onmouseover="hide()"
         onmouseout="show()"
+        onclick="clickshow()"
       ></p>
       <div>
         <p id="table">Now you have to find a table</p>
@@ -67,10 +81,24 @@
           o ^ o
         </button>
         <p id="tableshow" onmouseover="showtablefor()"></p>
-        <p id="tablefor"></p>
+        <div class="para" style="">
+          <p id="tablefor"></p>
+        </div>
       </div>
     </div>
     <script>
+      //You have to open this website in Mobile View
+      window.onload = function() {
+        var mobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
+          navigator.userAgent.toLowerCase()
+        );
+        if (mobile) {
+          alert("Visit this on a Computer for Better View");
+        }
+      };
+      let mobile2 = /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
+        navigator.userAgent.toLowerCase()
+      );
       let number = 20.5;
       console.log(number + 10.2);
       //Declaring data Types
@@ -87,9 +115,20 @@
       let hide = () =>
         (document.getElementById("sa").innerHTML =
           "INSPECT ME TO FIND JS CODE(CONSOLE)");
-      let show = () =>
-        (document.getElementById("sa").innerHTML =
-          "Something Strange!... I am lost!");
+      function show() {
+        if (mobile2) {
+          alert("Visit this on a Computer for Better View");
+        }
+
+        document.getElementById("sa").innerHTML =
+          "Something Strange!... I am lost!";
+      }
+
+      function clickshow() {
+        if (mobile2) {
+          alert("Visit this on a Computer for Better View");
+        }
+      }
 
       let car = [
         { name: "Flat", model: "123" },
@@ -220,15 +259,34 @@
         (document.getElementById("tablefor").innerHTML = tabfor);
 
       /*  var listOfObjects = [];
-        var a = ["car", "bike", "scooter"];
-        a.forEach(function(entry) {
-          var singleObj = {};
-          singleObj["type"] = "vehicle";
-          singleObj["value"] = entry;
-          listOfObjects.push(singleObj);
-        });
+          var a = ["car", "bike", "scooter"];
+          a.forEach(function(entry) {
+            var singleObj = {};
+            singleObj["type"] = "vehicle";
+            singleObj["value"] = entry;
+            listOfObjects.push(singleObj);
+          });
 
-        console.log(listOfObjects);*/
+
+
+          console.log(listOfObjects);*/
+      /*SOrting an array  containing string and numbers*/
+      let nameeg = ["HackRx", "Rajat", "Felix", "Donald"];
+      console.log("Sorted of " + nameeg + " is :-\n" + nameeg.sort());
+      let numbertobesort = [5, 6, 7, 2, 0, 856, 45, 123];
+      console.log(
+        numbertobesort +
+          " is the list of array \n Sorted one is " +
+          numbertobesort.sort((a, b) => a - b)
+      );
+      /*After applying sort() function you will modify the original one so to perform operation first make a copy of it.*/
+      console.log(numbertobesort);
+      //Finding maximum value from the array using Math.min.apply(null,array)
+      console.log(Math.max.apply(null, numbertobesort));
+
+      //Date object
+      let date = new Date();
+      console.log("Curent date is " + date);
     </script>
   </body>
 </html>

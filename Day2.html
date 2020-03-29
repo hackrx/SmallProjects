@@ -5,19 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn JAVASCRIPT CODE</title>
     <link rel="icon" href="logorajat.png" type="image/gif" sizes="16x16" />
-
+    <link rel="stylesheet" href="default.css" />
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
+      body {
+        background: black;
+      }
+      .clock {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #00f800;
+        font-size: 40px;
+        padding: 2px 5px 2px 5px;
+      }
+      .date {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+      }
+      span {
+        animation: blink 2s linear infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      div h1,
+      h2 {
+        color: #00f800;
+      }
+      footer {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #00f800;
+      }
       /* First we will design for mobile layout*/
 
       /*For desktop */
       @media only screen and (min-width: 768px) {
+        .clock {
+          font-size: 80px;
+        }
+        .date {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <input type="checkbox" />
+      <div>
+        <h1>
+          Hac<span><b>k</b></span
+          ><span><b>R</b></span
+          ><span><b>x</b></span>
+        </h1>
+      </div>
+
+      <!--<h2>A Digital Clock</h2> -->
+
+      <div id="myclockdisplay" class="clock"></div>
+      <div id="mydatedisplay" class="clock date"></div>
+    </div>
+    <footer>
+      <p>Made with<span> ❤</span> by HackRx</p>
+    </footer>
+    <script>
+      //Code for st nd rd th
+      const nth = function(d) {
+        if (d > 3 && d < 21) return "th";
+        switch (d % 10) {
+          case 1:
+            return "st";
+          case 2:
+            return "nd";
+          case 3:
+            return "rd";
+          default:
+            return "th";
+        }
+      };
+      function showtime() {
+        let date = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let day = date.getDay();
+        //let month = date.getMonth();
+        let blink = "<span>:</span>";
+        //console.log(month);
+        let year = date.getFullYear();
+        let currentdate = date.getDate();
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+        let monthnew = month[date.getMonth()];
+        let weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        let nday = weekday[day];
+        let session = "AM";
+        let ordinal = nth(currentdate);
+
+        if (h == 0) {
+          h = 12;
+        }
+        if (h > 12) {
+          h -= 12;
+          session = "PM";
+        }
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+        let time = h;
+        time += blink;
+        time += m;
+        time += blink;
+        time += s;
+        time += " " + session;
+        let datef =
+          currentdate +
+          ordinal +
+          "\t  " +
+          monthnew +
+          "  " +
+          year +
+          "    " +
+          nday;
+        //console.log(datef);
+        document.getElementById("myclockdisplay").innerHTML = time;
+        //document.getElementById("myclockdisplay").textContent = time;
+        document.getElementById("mydatedisplay").innerHTML = datef;
+
+        setTimeout(showtime, 1000);
+      }
+      //For Running clock use setInterval method it call methid in a specified time
+      //Set timeout method calls again the method when times out
+      showtime();
+    </script>
+  </body>
 </html>
