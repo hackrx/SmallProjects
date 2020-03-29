@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JAVASCRIPT</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid coral;
+        border-collapse: collapse;
+        margin: auto;
+
+        padding: 2px 5px 2px 5px;
+      }
+      table {
+        width: 80%;
+      }
+      #tablefor ol ul {
+        list-style-type: none;
+      }
+      .start {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        /* max-width: 800px;*/
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border: 0.65px solid chartreuse;
+      }
+      @media only screen and (min-width: 768px) {
+        /* For Mobile Screen */
+        .start {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="" class="start">
+      <h1
+        style="color:blue;text-align: center;margin: auto;position: relative;max-width:400px;border:2px solid cadetblue;"
+      >
+        Hello World!!
+      </h1>
+      <p>Let's Make A Difference!</p>
+      <p
+        id="sa"
+        style="text-align: center;margin: auto;border: 2px solid orange;max-width: 300px;"
+        onmouseover="hide()"
+        onmouseout="show()"
+      ></p>
+      <div>
+        <p id="table">Now you have to find a table</p>
+        <button
+          onclick="showtab()"
+          style="border:1.3px solid blue;background-color: #FFB42B;border-radius: 100%;color: white;"
+        >
+          o ^ o
+        </button>
+        <p id="tableshow" onmouseover="showtablefor()"></p>
+        <p id="tablefor"></p>
+      </div>
+    </div>
+    <script>
+      let number = 20.5;
+      console.log(number + 10.2);
+      //Declaring data Types
+      let object = { 1: "2", 2: "3", 3: "5", 4: "6" };
+
+      let array = [1, 5, 6, 8, 90];
+      for (i = 0; i < 5; i++) {
+        console.log("Value is " + object[i]);
+      }
+      for (i = 0; i < 5; i++) {
+        console.log("Value of array is " + array[i]);
+      }
+      console.log(typeof array);
+      let hide = () =>
+        (document.getElementById("sa").innerHTML = "HEyss u find me!");
+      let show = () =>
+        (document.getElementById("sa").innerHTML =
+          "Something Strange!... I am lost!");
+
+      let car = [
+        { name: "Flat", model: "123" },
+        { name: "Floyda", model: "4123" },
+        { name: "Benzz", model: "9123" }
+      ];
+
+      let intro = {
+        name: "Hackrx",
+        work: "Ethical Hacking",
+        letmeguess: () => "U are not so fool"
+      };
+      console.log(intro.name);
+      console.log(intro.work);
+      console.log(intro.letmeguess);
+
+      for (i = 0; i <= 1; i++) {
+        console.log(car[i].name);
+        console.log(car[i].model);
+      }
+      let try1 = "You \ got \fme!  \nNow Understand me";
+
+      console.log(try1);
+      let x = "Rajat";
+      let y = "Rajat";
+      console.log("Checking X and Y both contains Rajat as a string\n");
+      console.log(x == y);
+      console.log(
+        "objects can not be compared! with == because they are taken as different things"
+      );
+      console.log(
+        "But what if with === in JS \n then we got true as a result because \n === compares the types and values"
+      );
+      console.log(x === y);
+
+      let xstring = new String("Rajat");
+      let ystring = new String("Rajat");
+      console.log("Compairing two string");
+      console.log(xstring == ystring);
+      console.log(xstring === ystring);
+      console.log(
+        "Java Script objects on comparing result false because in JS two objects is always different"
+      );
+      let locate = "Hey there I am here!";
+      console.log(locate + "Index of I is " + locate.indexOf("I"));
+      console.log("Index of am " + locate.indexOf("am"));
+      console.log("last index of here" + locate.lastIndexOf("here", 4));
+      console.log(locate.search("I"));
+      //Immplementing Slice and start
+      //Slice can take two parameters first start,end
+      let sliced = locate.slice(4, 9);
+      console.log("Sliced String is " + sliced);
+      let code = "Let us assume code is, 78945612";
+      console.log(code.substring(code.indexOf(", ") + 1));
+      console.log(
+        "Use of split in string which is used to convert in an array"
+      );
+      console.log("code.split(", ")" + code.split(","));
+      let array2 = code.split(",");
+      console.log(array2[1]);
+      console.log("Maximum number in javascript");
+      console.log(Number.MAX_VALUE.toPrecision(23));
+      console.log(
+        "To convert number object into primitve number use valueof()"
+      );
+      let numberx = new Number(1345);
+      console.log(
+        numberx +
+          "Type of numberx is " +
+          typeof numberx +
+          "\n Now converting it into primitive type"
+      );
+      let numbery = numberx.valueOf();
+      console.log(
+        "Value of Primitive converted type is " +
+          numbery +
+          "\n Type is " +
+          typeof numbery
+      );
+      //Making a button to show a table using Java script
+      console.log("Now table");
+      let tab = "<table>";
+
+      let namelist = [
+        { name: "Rajat", depart: "CSE", city: "PAOTA" },
+        { name: "AMAN", depart: "CSE", city: "H.P" },
+        { name: "AMITESH", depart: "CSE", city: "CHANDIGARH" },
+        { name: "SONU", depart: "MECH", city: "KOLKATA" },
+        { name: "ROHIT", depart: "CHEC", city: "M.P" }
+      ];
+      let i1 = namelist.length;
+      let k = 3;
+      console.log(i1);
+      console.log(k);
+      tab += "<tr><th>Name</th><th>Department</th><th>City</th></tr>";
+      console.log(namelist[0].name);
+      for (let j = 0; j < i1; j++) {
+        tab += "<tr>";
+        tab += "<td>";
+        tab += namelist[j].name;
+        tab += "</td>";
+        tab += "<td>";
+        tab += namelist[j].depart;
+        tab += "</td>";
+        tab += "<td>";
+        tab += namelist[j].city;
+        tab += "</td>";
+
+        tab += "</tr>";
+      }
+      let showtab = () =>
+        (document.getElementById("tableshow").innerHTML = tab);
+
+      //Now Implementing Table using forEach() function
+      let tabfor = "<ol>";
+      namelist.forEach(add);
+
+      tabfor += "</ol>";
+      function add(value) {
+        let listarray = Object.values(value);
+
+        tabfor += `<li>UserName:${listarray[0]}</li><ul><li>Department: ${listarray[1]}</li><li>City:${listarray[2]}</li></ul><hr>`;
+        //  console.log(Object.values(value));
+        //console.log(${value.city});
+        //console.log(`${listarray.name}`);
+      }
+      let showtablefor = () =>
+        (document.getElementById("tablefor").innerHTML = tabfor);
+
+      /*  var listOfObjects = [];
+        var a = ["car", "bike", "scooter"];
+        a.forEach(function(entry) {
+          var singleObj = {};
+          singleObj["type"] = "vehicle";
+          singleObj["value"] = entry;
+          listOfObjects.push(singleObj);
+        });
+
+        console.log(listOfObjects);*/
+    </script>
+  </body>
+</html>
