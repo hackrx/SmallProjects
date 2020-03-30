@@ -11,8 +11,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+      document.onkeydown = function(e) {
+        if (event.keyCode == 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          //window.alert("Sorry You can't :(...");
+          // return false;
+          return true;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
+        }
+      };
+    </script>
   </head>
-  <body>
+  <body oncontextmenu="return false;">
     <div class="start">
       <div class="wrapper">
         <h1 class="glitch text" data-text="HackRx">HackRx</h1>
@@ -27,12 +48,16 @@
 
     <footer>
       <div class="social">
-        <a href="#" class="btnsoc"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="btnsoc"
+        <a href="https://www.instagram.com/rajatgoyal86/" class="btnsoc"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100015912108038"
+          class="btnsoc"
           ><i class="fa fa-facebook" aria-hidden="true"></i
         ></a>
 
-        <a href="#" class="btnsoc"
+        <a href="https://github.com/hackrx" class="btnsoc"
           ><i class="fa fa-github" aria-hidden="true"></i
         ></a>
       </div>
@@ -40,6 +65,16 @@
     </footer>
     <script>
       //Code for st nd rd th
+      // Disable inspect element
+      $(document).bind("contextmenu", function(e) {
+        e.preventDefault();
+      });
+      $(document).keydown(function(e) {
+        if (e.which === 123) {
+          return false;
+        }
+      });
+      ///////
       const nth = function(d) {
         if (d > 3 && d < 21) return "th";
         switch (d % 10) {
