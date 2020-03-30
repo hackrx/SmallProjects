@@ -4,80 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn JAVASCRIPT CODE</title>
-    <link rel="icon" href="logorajat.png" type="image/gif" sizes="16x16" />
+    <link rel="icon" href="img/logorajat.png" type="image/gif" sizes="16x16" />
     <link rel="stylesheet" href="css/day2.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      body {
-        background: black;
-      }
-
-      .clock {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        width: 100%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        color: #00f800;
-        font-size: 40px;
-        padding: 2px 5px 2px 5px;
-      }
-
-      .date {
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-      }
-
-      #myclockdisplay span,
-      p span {
-        animation: blink 2s linear infinite;
-      }
-
-      @keyframes blink {
-        0% {
-          opacity: 0;
-        }
-
-        20% {
-          opacity: 0.8;
-        }
-
-        100% {
-          opacity: 1;
-        }
-      }
-
-      footer {
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #00f800;
-      }
-
-      /* First we will design for mobile layout*/
-
-      /*For desktop */
-      @media only screen and (min-width: 768px) {
-        .clock {
-          font-size: 80px;
-        }
-
-        .date {
-          font-size: 20px;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="start">
@@ -93,7 +26,16 @@
     <!--Code for Weather API-->
 
     <footer>
-      <div class="social"></div>
+      <div class="social">
+        <a href="#" class="btnsoc"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="btnsoc"
+          ><i class="fa fa-facebook" aria-hidden="true"></i
+        ></a>
+
+        <a href="#" class="btnsoc"
+          ><i class="fa fa-github" aria-hidden="true"></i
+        ></a>
+      </div>
       <p>Made with<span class="bl"> ❤</span> by HackRx</p>
     </footer>
     <script>

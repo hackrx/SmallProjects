@@ -1,3 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: black !important;
+}
+
+.clock {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #00f800;
+    font-size: 40px;
+    padding: 2px 5px 2px 5px;
+}
+
+.date {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+#myclockdisplay span,
+p span {
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer,
+.social {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00f800;
+}
+
+/* First we will design for mobile layout*/
+
+/*For desktop */
+@media only screen and (min-width: 768px) {
+    .clock {
+        font-size: 80px;
+    }
+
+    .date {
+        font-size: 20px;
+    }
+}
+
 .wrapper {
 
     overflow: hidden;
@@ -50,7 +120,7 @@
 @keyframes glitch-effect {
     0% {
         left: -2px;
-        top: -2px;
+        top: 0px;
     }
 
     25% {
@@ -63,14 +133,49 @@
     50% {
 
         left: -1px;
-        top: 2px;
+        top: 0px;
 
     }
 
     100% {
 
         left: -2px;
-        top: -2px;
+        top: 0px;
 
     }
+}
+
+.social {
+    position: relative;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    bottom: 5% !important;
+}
+
+
+.btnsoc {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    /*background-color: aliceblue;*/
+    border-radius: 30%;
+    padding: 0;
+    margin: 10px;
+    box-shadow: 0 5px 15px -5px aliceblue;
+    color: #00f800;
+
+}
+
+.btnsoc i {
+
+
+    font-size: 25px;
+    transition: 0.2s linear;
+    line-height: 30px;
+
+}
+
+.btnsoc:hover i {
+    transform: scale(1.5);
 }
