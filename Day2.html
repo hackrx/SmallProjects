@@ -31,7 +31,8 @@
         position: absolute;
         top: 50%;
       }
-      span {
+      #myclockdisplay span,
+      p span {
         animation: blink 2s linear infinite;
       }
       @keyframes blink {
@@ -67,17 +68,15 @@
           font-size: 20px;
         }
       }
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
     </style>
   </head>
   <body>
-    <div>
-      <input type="checkbox" />
-      <div>
-        <h1>
-          Hac<span><b>k</b></span
-          ><span><b>R</b></span
-          ><span><b>x</b></span>
-        </h1>
+    <div class="start">
+      <div class="wrapper">
+        <h1 class="glitch">HackRx</h1>
       </div>
 
       <!--<h2>A Digital Clock</h2> -->
@@ -86,7 +85,8 @@
       <div id="mydatedisplay" class="clock date"></div>
     </div>
     <footer>
-      <p>Made with<span> ❤</span> by HackRx</p>
+      <div class="social"></div>
+      <p>Made with<span class="bl"> ❤</span> by HackRx</p>
     </footer>
     <script>
       //Code for st nd rd th
@@ -110,7 +110,7 @@
         let s = date.getSeconds();
         let day = date.getDay();
         //let month = date.getMonth();
-        let blink = "<span>:</span>";
+        let blink = `<span>:</span>`;
         //console.log(month);
         let year = date.getFullYear();
         let currentdate = date.getDate();
