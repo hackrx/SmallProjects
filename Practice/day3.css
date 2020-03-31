@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: auto 40px auto 40px;
+    margin-top: 30px;
+}
+
+.div1 {
+    background-color: lightcoral;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    flex-basis: 50%;
+}
+
+.div2 {
+    font-size: 40px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: lightskyblue;
+}
+
+.column_layout {
+    max-width: 1400px;
+    margin: 40px auto;
+
+    background-color: honeydew;
+    line-height: 1.65;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}
+
+.column_layout>div {
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.main_column {
+    flex-basis: 40%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: hotpink;
+    order: 2;
+
+}
+
+.side_bar1 {
+
+    background-color: indianred;
+    flex-basis: 20%;
+    order: 1;
+}
+
+.side_bar2 {
+    background-color: indigo;
+    order: 2;
+    flex-basis: 20%;
+}
+
+.call_out_container {
+    max-width: 1400px;
+    margin: 40px auto 40px auto;
+
+}
+
+
+.call_out_container>div {
+
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.call-out {
+    padding: 20px;
+
+    /* width: 30%;*/
+    /* margin-right: 40px;*/
+    flex-basis: 30%;
+
+    /* Width of each element according to flex*/
+
+
+}
+
+.call-out p {
+    margin-top: 20px;
+}
+
+.call-out:nth-child(1) {
+    background-color: #c0dbe2;
+}
+
+.call-out:nth-child(2) {
+    background-color: #cdf1c3;
+}
+
+.call-out:nth-child(3) {
+    background-color: #ccb9da;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer>div {
+    text-align: center;
+    background-color: magenta;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+
+@media (min-width:900px) {
+
+    .call_out_container {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        /*align-items: stretch; //default value
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;*/
+        justify-content: space-between;
+
+
+    }
+
+    .call_out_container>div {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+
+    .column_layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
