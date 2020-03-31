@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rem & em CSS Properties</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="day4.css" />
+    <script></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Understanding CSS Measurement Units</h1>
+      <h3>Rem, Em, Vh, Vw</h3>
+    </div>
+    <div class="rem-em-container">
+        <div class="rem-container">
+            <div>
+                <h3>Let's talk about Rem</h3>
+                <p>
+                  Rem basically stands for relative to something. Rem is always relative
+                  to root element, which is basically html elements.On the other side, em
+                  is relative to parent element. Default size for HTML element is
+                  <span>16px</span> which is equal to 1rem. User can actually control the
+                  font size from the browser settings, through which if you have used rem
+                  for an element then it will automatically resize it according to browser
+                  settings or it is set by default to <span>16px</span>.
+                </p>
+            </div>
+         
+        </div>
+        <div class="em-container">
+            <div>
+                <h3>Now let's talk about Em</h3>
+                <p>
+                  Em is not relative to root element as rem does but it is relative to its
+                  parent elements.clock And is there is no parent element of that
+                  particular element then em will behaves like rem. But it will not do the
+                  same when you change the browser settings i.e view large, view normal ,
+                  view small.
+                </p>
+              </div></div>
+    </div>
+    <div class="vh-vw-container">
+         
+    <div class="vh-container">
+        <div>
+          <h3>What is vh??</h3>
+          <p>
+            vh is stands for view port height.If you are setting size of an element
+            20vh , it means you are assigning it to cover the 20 view port height of
+            the page which is pretty interesting, isn't it. Let's take screen is of
+            100vh size, then after assigning an element 20vh it will take 20 percent
+            of total height.And if you assign it as 100vh then it will take the 100
+            percent of the page size which by means covers the whole page.
+          </p>
+        </div>
+          
+      </div>
+      <div class="vw-container">
+        <div>
+          <h3>What is vw stands for?</h3>
+          <p>
+            vw stands for view port width.Pretty similar to vh, but vh is used for
+            height purpose and vw is for width.It also depends on width of page.If
+            you are assigns 20vw to an element then it will take 20 percent width of
+            the page. vh, vw, rem and em makes the page responsive.So I suggest you
+            to start using rem and em units instead of px.
+          </p>
+        </div>
+      </div>
+    </div>
+     
+    <footer>
+        <div class="social-med">
+            <div><a href="https://www.instagram.com/rajatgoyal86/" class="btnsoc"
+                ><i class="fa fa-instagram"></i
+              ></a></div>
+            <div><a
+                href="https://www.facebook.com/profile.php?id=100015912108038"
+                class="btnsoc"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a></div>
+          
+    <div><a href="https://github.com/hackrx" class="btnsoc"
+        ><i class="fa fa-github" aria-hidden="true"></i
+      ></a></div>
+          
+        </div>
+    <p>Made with<span class="bl"> ❤</span> by HackRx</p>
+  
+      </div>
+    </footer>
+  </body>
+</html>
