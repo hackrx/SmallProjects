@@ -107,6 +107,71 @@ p {
     background-color: #ffaaa5;
 }
 
+.like-activity,
+.social-med {
+    background-color: white;
+
+}
+
+.like-activity>img {
+    color: #fe346e;
+    height: 3.2rem;
+    padding: 0.2rem;
+    transition: 0.1s linear;
+    background-color: #fe346e;
+}
+
+.like-activity>img:hover {
+    transform: scale(1.2);
+}
+
+.social-med>div {}
+
+.social-med {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnsoc {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    /*background-color: aliceblue;*/
+    border-radius: 30%;
+    padding: 0;
+    margin: 5px;
+    box-shadow: 0 5px 15px -5px aliceblue;
+    color: royalblue;
+
+}
+
+.btnsoc i {
+
+
+    font-size: 25px;
+    transition: 0.1s linear;
+    line-height: 30px;
+
+}
+
+.btnsoc:hover i {
+    transform: scale(1.5);
+}
+
+footer p {
+    color: royalblue;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
 @media (min-width:900px) {
 
 
