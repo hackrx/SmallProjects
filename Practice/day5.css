@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+
+}
+
+.header-container {
+
+    max-width: 90vw;
+    margin: 20px auto;
+}
+
+.header {
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    border-radius: 1.2rem;
+    max-width: 90vw;
+    background-color: royalblue;
+}
+
+.header>h1 {
+    font-size: 2rem;
+    width: 90vw;
+    text-align: center;
+    /* background-color: salmon; */
+    border-radius: 30px;
+    padding: 5px auto 5px auto;
+    position: static;
+    margin: 0 auto;
+
+
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header>h3 {
+    margin: 10px auto 10px auto;
+    font-size: 1.2rem;
+    padding: 20px;
+    /*
+    justify-content: center; */
+
+}
+
+.name>h4 {
+
+    font-size: 0.8rem;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #7f78d2;
+}
+
+.bundle-phobia-container,
+.figma-container,
+.viz-bug-container,
+.flare-container,
+.insomnia-container,
+.font-flipper-cont {
+    /* background-color: sandybrown; */
+    padding: 1.2rem;
+    width: 80vw;
+    box-shadow: 0.3rem 0.3rem goldenrod;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    border: 2px solid slateblue;
+
+}
+
+p {
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+
+.bundle-phobia-container {
+    background-color: #00bdaa;
+}
+
+.figma-container {
+    background-color: #ffb385;
+}
+
+.viz-bug-container {
+    background-color: #fe346e;
+}
+
+.flare-container {
+    background-color: #f78259;
+}
+
+.insomnia-container {
+    background-color: #005082;
+}
+
+.font-flipper-cont {
+    background-color: #ffaaa5;
+}
+
+@media (min-width:900px) {
+
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .header {
+        margin: 0 auto;
+        background-color: royalblue;
+    }
+
+    .header>h1 {
+        font-size: 3.4rem;
+        width: 70vw;
+        text-decoration: underline #fe346e;
+        letter-spacing: 0.4rem;
+
+    }
+
+    .name>h4 {
+        line-height: 1.6rem;
+        font-size: 1.5rem;
+        width: 50vw;
+    }
+
+    .bundle-phobia-container,
+    .figma-container,
+    .viz-bug-container,
+    .flare-container,
+    .insomnia-container,
+    .font-flipper-cont {
+        flex-basis: 40%;
+    }
+
+
+
+    .first-container,
+    .second-container,
+    .third-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 30px auto;
+        justify-content: space-between;
+        max-width: 90vw;
+
+    }
+
+
+
+
+
+}
