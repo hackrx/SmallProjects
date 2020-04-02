@@ -1,0 +1,47 @@
+//Understanidng concept of css grid
+ Css grid property can be used to arrange the items accordingly.
+
+
+ First you need  to make a div or section element and make inside elements as childs
+ which you want to show in grid.
+ let us suppose eg.
+
+ <div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>
+
+Observe this carefully you have made a parent div element with a class name grid()
+
+now .grid-container is the parent class and and you can use display: grid;
+to make the grid view.
+1.In grid system you have total 12 columns to adjust on a sigle row.
+2.and you can adjust the elements to cover the no. of columns accordingly.
+3.You can also adjust gap between columns.
+4.You can also arrange items to show in a particular row.
+
+4:  grid-column: 1/5;//it will take the 1/5 size of whole row
+  : grid-column: 6/9; // this particular column starts from 6th part of the column and stretch upto 9th part
+  : 
+    grid-column: 10/12; //it will start from 10 part of the column and stretch upto 12th part
+    grid-row:2; //it will put this element in second row.
+
+3: gap:10px //it should be written in parent class to make gap of 10px between columns.
+ fr is the fraction unit you can use to dive the columns according to percentage.
+
+ grid-template-columns:repeat(3,1fr);
+
+
+eg.
+
+.display-grid{
+    display:grid;
+    
+}

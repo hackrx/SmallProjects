@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Tutorial</title>
+    <link rel="stylesheet" href="css/socialmed.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="img/web-logorajat.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color:#fde2e2;
+      }
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        background-color: #2196f3;
+        width: 70vw;
+        margin: 2rem auto;
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+      }
+      p.st {
+        font-size: 1.2rem;
+        background-color: yellow;
+        width: 90vw;
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+        margin: 1.2rem auto;
+      }
+
+    
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #2196f3;
+        padding: 10px;
+        grid-row-gap: 1.2rem;
+        grid-column-gap: 1rem;
+        width: 90vw;
+        justify-content: center;
+        margin: 20px auto;
+        border-radius: 1.2rem;
+        align-content: space-evenly;
+      }
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 2.2rem;
+        border-radius: 2rem;
+        text-align: center;
+      }
+      .c1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
+      }
+      .c3 {
+        grid-row: 1;
+        /*grid-column-start:2;
+grid-column-end:4;
+*/
+        /*grid-column:2/4;*/ /*Now this can be better done if you know number of lines in columns*/
+        /*But now think, if u want to make start from 1st line and cover 2 columns*/
+        grid-column: 2 / span 2;
+      }
+      .c4 {
+        grid-row: 3;
+        /* 
+grid-column-start:3;
+grid-column-end:5;*/
+
+        grid-column: 3/5;
+      }
+
+      .c6 {
+        grid-row: 2 / span 2;
+      }
+
+      .c5 {
+        grid-area: 2 / 3 / 4 / 4;
+      }
+     
+
+      @media (min-width: 750px) {
+        .grid-cont{
+          display: grid;
+        margin: auto;
+        justify-content: center;
+        
+            grid-template-columns: 1fr 1fr ;
+
+      }
+      .grid-cont >p {
+          width: 20rem;
+        height: 20vh;
+       
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Elements</h1>
+
+    <div class="grid-cont">
+        <p class="st">
+            A Grid Layout must have a parent element with the
+            <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.
+          </p>
+      
+          <p class="st">
+            Direct child element(s) of the grid container automatically becomes grid
+            items.Inspect it to understand the concept.
+          </p>
+    </div>
+    
+
+    <div class="grid-container">
+      <div class="grid-item c1">1</div>
+      <div class="grid-item  c2">2</div>
+      <div class="grid-item c3">3</div>
+      <div class="grid-item c4">4</div>
+      <div class="grid-item c5">5</div>
+      <div class="grid-item c6">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+    
+    <footer>
+        <div class="like-activity">
+            <p>Liked it?Tap it!
+            </p>
+            <img src="img/thumb-up.svg" onclick="increment()" alt="Like Image">
+            <p id="like-count">0</p>
+        </div>
+        <div class="social-med">
+            <div><a href="https://www.instagram.com/rajatgoyal86/" class="btnsoc"
+                ><i class="fa fa-instagram"></i
+              ></a></div>
+            <div><a
+                href="https://www.facebook.com/profile.php?id=100015912108038"
+                class="btnsoc"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a></div>
+          
+    <div><a href="https://github.com/hackrx" class="btnsoc"
+        ><i class="fa fa-github" aria-hidden="true"></i
+      ></a></div>
+          
+        </div>
+    <p>Made with<span class="bl"> ❤</span> by HackRx</p>
+  
+      </div>
+    </footer>
+  </body>
+</html>
