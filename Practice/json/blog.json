@@ -1,0 +1,13 @@
+{
+  "blogs": [
+    {
+      "name": "Tools for the developer"
+    },
+    {
+      "name": "CSS-flexbox-properties"
+    },
+    {
+      "name": "JavaScript-Concepts"
+    }
+  ]
+}
