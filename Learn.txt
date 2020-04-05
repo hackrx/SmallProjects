@@ -1,0 +1,16 @@
+Java Script display Properties:-
+Writing init HTML element, uisng innerHTML,
+,,,,,,,,,,,,, HTML output, using document.write()
+,,,,,,,,,,,,,an alert box, using window.alert()
+,,,,,,,,,,,,, into browser console , using console.log()
+
+There are events in JS which can be used , HTMl events can does anything which can a user & a browser done and Some examples of HTML events:
+An HTML WEB PAGE finished loading
+An HTML input field was changed
+An HTML BUTTON WAS CLICKED
+
+AJAX request 
+Ajax request is basically just allows us to communicate with a server by making a HTPP request, retriving the data without reloading the page from that server which we can further use in our code.
+AJAX stands for Asynchronous JavaScript And XML is the data which we are retriving.
+How to make a HTTP request?
+<script>tojquerybycdn
