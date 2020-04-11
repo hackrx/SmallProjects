@@ -1,0 +1,13 @@
+.Person {
+    border: 0.2rem solid greenyellow;
+    margin: 10px auto;
+    width: 50vw;
+
+}
+
+.Personin>p,
+label,
+p {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
