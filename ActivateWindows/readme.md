@@ -2,11 +2,9 @@
 
 ## You need to follow the simple steps to activate your windows
 
-clone this repo `hackrx.github.io/`
+1. Just Copy the code which is written inside `Activatewindows.txt`.
 
-Or just Copy paste the code which is written inside `Activatewindows.txt`.
-
-Now create a folder with the same name and with the extension `.txt` .Now open this file and paste the code which you have copied from `Activatewindows.txt` .
+Now create a folder on the `Desktop` with the same name and with the extension `.txt` .Now open this file and paste the code which you have copied from `Activatewindows.txt` .
 
 Now go to `File` tab and click on `save as` now give it a name
 `Activatewindows.cmd` .
