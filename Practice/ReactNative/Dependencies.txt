@@ -1,0 +1,5 @@
+react-native
+react
+redux
+react-native-thunk
+react-redux
